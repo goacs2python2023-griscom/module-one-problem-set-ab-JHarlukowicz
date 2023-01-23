@@ -1,0 +1,69 @@
+def square(num):
+    return num**2
+print(square(5)) # 25
+print(square(3)) # 9
+#next problem
+import math
+
+def square(num):
+    return num**2
+
+def area_of_circle(radius):
+    return math.pi * square(radius)
+print(area_of_circle(5)) # 78.53981633974483
+print(area_of_circle(3)) # 28.274333882308138
+#next problem
+def compute_funds_raised(num_tickets_sold, prize_cost):
+    ticket_price = 5
+    funds_raised = num_tickets_sold * ticket_price - prize_cost
+    return funds_raised
+print(compute_funds_raised(50, 50)) # 250
+print(compute_funds_raised(100, 50)) # 450
+#next problem
+def calculate_total(bill, tip_percentage):
+    tip = bill * (tip_percentage / 100)
+    total = bill + tip
+    return total
+print(calculate_total(100, 20)) # 120.0
+print(calculate_total(50, 10)) # 55.0
+#next problem
+def road_trip_cost(distance, fuel_efficiency, gas_price):
+    gallons_of_gas = distance / fuel_efficiency
+    cost = gallons_of_gas * gas_price
+    return cost
+print(road_trip_cost(500, 25, 2.5)) # 50.0
+print(road_trip_cost(1000, 30, 3)) # 100.0
+#next problem
+import random
+
+def roll_dice():
+    dice1 = random.randint(1, 6)
+    dice2 = random.randint(1, 6)
+    dice_sum = dice1 + dice2
+    if dice_sum in (6, 7, 8):
+        return "win"
+    else:
+        return "lose"
+print(roll_dice()) 
+#next problem
+def compare_dates(month1, day1, year1, month2, day2, year2):
+    date1 = (year1, month1, day1)
+    date2 = (year2, month2, day2)
+    if date1 < date2:
+        return "before"
+    elif date1 > date2:
+        return "after"
+    else:
+        return "same"
+print(compare_dates(1, 1, 2020, 2, 1, 2020)) # before
+print(compare_dates(3, 1, 2021, 2, 1, 2020)) # after
+print(compare_dates(3, 1, 2020, 3, 1, 2020)) # same
+#next problem
+def can_spell_dad(top_faces, bottom_faces):
+    cards = top_faces + bottom_faces
+    if "D" in cards and "A" in cards and "D" in cards:
+        return "yes"
+    else:
+        return "no"
+print(can_spell_dad("ABC", "DEF")) # no
+print(can_spell_dad("DAD", "ABC")) # yes
